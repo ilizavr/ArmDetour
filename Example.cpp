@@ -31,7 +31,7 @@ bool radarhack(int player){
 void thread_hack(){
  for(;findaddrinmaps("libil2cpp.so")==NULL;sleep(1));
  
- oldradar=(bool(*)(int))ArmDetour(findaddrinmaps("libil2cpp.so")+0xDAEAF0,(uintptr_t)radarhack);
+ oldradar=(bool(*)(int))ilizavr::ArmDetour(findaddrinmaps("libil2cpp.so")+0xDAEAF0,(uintptr_t)radarhack);
 }
 
 int mainlib(){
